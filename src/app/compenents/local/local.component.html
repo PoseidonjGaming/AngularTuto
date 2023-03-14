@@ -1,0 +1,12 @@
+<div class="btn-group">
+  <button class="btn btn-primary" (click)="locale='en'">Anglais</button>
+  <button class="btn btn-warning" (click)="locale='fr'">Le gréviste</button>
+</div>
+
+<div class="btn-group">
+  <button class="btn btn-primary" (click)="devise='USD'">Dollar</button>
+  <button class="btn btn-warning" (click)="devise='EUR'">Euro</button>
+</div>
+
+<p>{{date | date:'full': undefined: locale}}</p>
+<p>{{19.99 | currency: devise: 'symbol' : undefined: locale}}</p>
