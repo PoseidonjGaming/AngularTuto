@@ -1,0 +1,19 @@
+<p>{{prod.id}},{{prod.name}}</p>
+<p [innerHTML]="html"></p>
+
+<img src="{{src}}">
+
+<img [src]="src" alt="">
+
+
+<button (click)="test()" id="test" class="btn btn-primary">event click</button>
+<button (dblclick)="testdl($event)" class="btn btn-primary">event</button>
+
+
+<input type="text" [(ngModel)]="msg"/>
+<input type="text" #input/>
+<p>{{msg}}</p>
+
+<ul>
+  <li *ngFor="let name of users; index as key">{{name}},{{key}}</li>
+</ul>
