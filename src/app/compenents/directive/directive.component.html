@@ -1,0 +1,69 @@
+<button class="btn btn-primary" (click)="display=!display">Toggle</button>
+<p *ngIf="display">
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra vestibulum risus, sit amet elementum odio
+  tincidunt rutrum. In laoreet id dolor vel molestie. Class aptent taciti sociosqu ad litora torquent per conubia
+  nostra, per inceptos himenaeos. Morbi congue mattis mauris ac porta. Sed vitae nisi non erat condimentum
+  bibendum. </p>
+
+<p *ngIf="display; else none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id velit justo. In
+  turpis ex,
+  gravida non auctor a, consequat blandit sem. Morbi iaculis nisl quis sapien dapibus commodo. Duis nec blandit mauris.
+  Nunc vulputate accumsan laoreet. Nullam lacinia viverra quam at feugiat. Duis rutrum lobortis urna, eget placerat
+  elit. </p>
+
+<ng-template #none>
+  <p>Lorem ipsum dolor sit amet, [...] Duis rutrum lobortis urna, eget placerat
+    elit.</p>
+</ng-template>
+
+<div *ngIf="info();let msg">
+  <p>{{msg}}</p>
+</div>
+
+<ul>
+  <li *ngFor="let l of ['a','b']; index as i; even as e; odd as o; last as la; first as f">{{l}} {{i}} {{e}} {{o}}
+    {{la}} {{f}}
+  </li>
+</ul>
+
+<div class="btn-group">
+  <button class="btn btn-primary" (click)="or='hor'">Horizontal</button>
+  <button class="btn btn-warning" (click)="or='ver'">Vertical</button>
+  <button class="btn btn-primary" (click)="or=undefined">Undefined</button>
+</div>
+
+<div [ngSwitch]="or">
+  <ul class="list-unstyled" *ngSwitchCase="'ver'">
+    <li>Element 1</li>
+    <li>Element 2</li>
+    <li>Element 3</li>
+    <li>Element 4</li>
+    <li>Element 5</li>
+  </ul>
+  <ul class="list-inline" *ngSwitchCase="'hor'">
+    <li class="list-inline-item">Element 1</li>
+    <li class="list-inline-item">Element 2</li>
+    <li class="list-inline-item">Element 3</li>
+    <li class="list-inline-item">Element 4</li>
+    <li class="list-inline-item">Element 5</li>
+  </ul>
+  <p *ngSwitchDefault>Error</p>
+</div>
+
+
+<button [ngClass]="{
+  'btn btn-secondary': class=='done'
+}" (click)="class='done'">Test</button>
+
+<div class="btn-group">
+  <button class="btn btn-primary" (click)="pg=10; color='red'">Horizontal</button>
+  <button class="btn btn-warning" (click)="pg=50; color='warning'">Vertical</button>
+  <button class="btn btn-primary" (click)="pg=100; color='green'">Undefined</button>
+</div>
+<div class="progress my-3">
+  <div class="progress-bar" [ngStyle]="{'width': pg+'%', 'background-color': color}"></div>
+</div>
+<div class="progress my-3" role="progressbar" aria-valuemin="0" aria-valuemax="100" [attr.aria-valuenow]="pg">
+  <div class="progress-bar" [style.width]="pg+'%'"></div>
+</div>

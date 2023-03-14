@@ -7,7 +7,8 @@ import { PresComponent } from './compenents/pres/pres.component';
 import { FormsModule } from '@angular/forms';
 import { TodoListComponent } from './exo/todo-list/todo-list.component';
 import { HomeComponent } from './compenents/home/home.component';
-import { FilterComponent } from './compenents/filter/filter.component'
+import { FilterComponent } from './compenents/filter/filter.component';
+import { DirectiveComponent } from './compenents/directive/directive.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FilterComponent } from './compenents/filter/filter.component'
     PresComponent,
     TodoListComponent,
     HomeComponent,
-    FilterComponent
+    FilterComponent,
+    DirectiveComponent
   ],
   imports: [
     BrowserModule,
