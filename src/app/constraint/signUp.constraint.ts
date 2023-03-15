@@ -7,7 +7,8 @@ export const signUpConstraint={
     required: 'required'
   },
   cpwd:{
-    required: 'required'
+    required: 'required',
+    check_pwd: 'not the same'
   },
   terms:{
     required:'required'

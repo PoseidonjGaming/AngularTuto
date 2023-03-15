@@ -14,7 +14,7 @@ export class RactiveFormComponent {
     pwd:new FormControl(null, [Validators.required]),
     cpwd:new FormControl(null, [Validators.required]),
     terms:new FormControl(null, [Validators.requiredTrue]),
-  });
+  }, validators:[CustomValidator.checkPwd()]);
 
   sub(){
     this.form.markAllAsTouched();

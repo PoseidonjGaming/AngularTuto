@@ -12,4 +12,16 @@ export class CustomValidator{
       return null
     }
   }
+
+  static checkPwd(){
+   return (control: AbstractControl): ValidationErrors | null=>{
+
+        const pwd=control.get('pwd')
+        const cpwd=control.get('cpwd')
+        if(pwd?.value!=cpwd?.value){
+          cpwd?.setErrors({'check_pwd': true})
+        }
+        return null
+      }
+  }
 }
