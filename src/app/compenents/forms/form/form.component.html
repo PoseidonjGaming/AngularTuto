@@ -1,0 +1,29 @@
+<section class="row">
+  <aside class="col-4">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let product of products">
+        {{ product.name }} @ {{ product.price | currency }}
+      </li>
+    </ul>
+  </aside>
+  <article class="col-8">
+    <form (ngSubmit)="submit(form)" #form="ngForm">
+      <div class="mb-3">
+        <label for="name">Nom: </label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Entrer le nom du produit" [(ngModel)]="product.name" required #name="ngModel"/>
+      </div>
+      <div *ngIf="name.touched && name.invalid">
+        <p class="text-danger" *ngIf="name.hasError('required')">Required</p>
+      </div>
+      <div class="mb-3">
+        <label for="price">Prix: </label>
+        <input type="text" name="price" id="price" class="form-control" placeholder="Entrer le prix du produit" [(ngModel)]="product.price" required #price="ngModel" pattern="\d+([.,]\d+)?"/>
+      </div>
+      <div *ngIf="price.touched && price.invalid">
+        <p class="text-danger" *ngIf="price.hasError('required')">Required</p>
+        <p class="text-danger" *ngIf="price.hasError('pattern')">incorrect</p>
+      </div>
+      <button type="submit" class="btn btn-outline-primary">Ajouter</button>
+    </form>
+  </article>
+</section>

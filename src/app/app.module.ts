@@ -13,6 +13,7 @@ import { DirectiveComponent } from './compenents/directive/directive.component';
 import { LocalComponent } from './compenents/local/local.component';
 import { CustomPipeComponent } from './compenents/custom-pipe/custom-pipe.component';
 import { SortPipe } from './pipes/sort.pipe';
+import { FormComponent } from './compenents/forms/form/form.component';
 
 registerLocaleData(fr);
 
@@ -26,7 +27,8 @@ registerLocaleData(fr);
     DirectiveComponent,
     LocalComponent,
     CustomPipeComponent,
-    SortPipe
+    SortPipe,
+    FormComponent
   ],
   imports: [
     BrowserModule,

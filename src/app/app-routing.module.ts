@@ -7,6 +7,7 @@ import { FilterComponent } from './compenents/filter/filter.component'
 import { DirectiveComponent } from './compenents/directive/directive.component'
 import { LocalComponent } from './compenents/local/local.component'
 import { CustomPipeComponent } from './compenents/custom-pipe/custom-pipe.component'
+import { FormComponent } from './compenents/forms/form/form.component'
 
 const routes: Routes = [
   { path: '', component: HomeComponent , title: 'Accueil'},
@@ -20,6 +21,7 @@ const routes: Routes = [
     { path:'pipe', component: CustomPipeComponent },
     { path:'', redirectTo:'pipe', pathMatch: "full"}
   ]},
+  { path: 'driven-forms', component: FormComponent,  title: 'Forms'},
 ];
 
 @NgModule({
