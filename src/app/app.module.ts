@@ -11,6 +11,8 @@ import { HomeComponent } from './compenents/home/home.component';
 import { FilterComponent } from './compenents/filter/filter.component';
 import { DirectiveComponent } from './compenents/directive/directive.component';
 import { LocalComponent } from './compenents/local/local.component';
+import { CustomPipeComponent } from './compenents/custom-pipe/custom-pipe.component';
+import { SortPipe } from './pipes/sort.pipe';
 
 registerLocaleData(fr);
 
@@ -22,7 +24,9 @@ registerLocaleData(fr);
     HomeComponent,
     FilterComponent,
     DirectiveComponent,
-    LocalComponent
+    LocalComponent,
+    CustomPipeComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,

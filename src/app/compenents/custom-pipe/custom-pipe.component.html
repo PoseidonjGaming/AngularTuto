@@ -1,0 +1,7 @@
+<div class="btn-group">
+  <button class="btn btn-primary" (click)="order='ASC'">Up</button>
+  <button class="btn btn-warning" (click)="order='DESC'">Down</button>
+</div>
+<ul>
+  <li *ngFor="let item of tab | sort: order">{{item}}</li>
+</ul>
