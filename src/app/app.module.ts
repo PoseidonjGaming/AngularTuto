@@ -5,7 +5,7 @@ import fr from '@angular/common/locales/fr'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PresComponent } from './compenents/pres/pres.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodoListComponent } from './exo/todo-list/todo-list.component';
 import { HomeComponent } from './compenents/home/home.component';
 import { FilterComponent } from './compenents/filter/filter.component';
@@ -14,6 +14,7 @@ import { LocalComponent } from './compenents/local/local.component';
 import { CustomPipeComponent } from './compenents/custom-pipe/custom-pipe.component';
 import { SortPipe } from './pipes/sort.pipe';
 import { FormComponent } from './compenents/forms/form/form.component';
+import { RactiveFormComponent } from './compenents/forms/ractive-form/ractive-form.component';
 
 registerLocaleData(fr);
 
@@ -28,12 +29,14 @@ registerLocaleData(fr);
     LocalComponent,
     CustomPipeComponent,
     SortPipe,
-    FormComponent
+    FormComponent,
+    RactiveFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [{
     provide: LOCALE_ID, useValue:'fr'
