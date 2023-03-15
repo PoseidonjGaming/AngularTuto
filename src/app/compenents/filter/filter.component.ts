@@ -28,6 +28,10 @@ export class FilterComponent {
       this.start=0
       this.end=5
     }
+    else if(this.end==this.tab.length){
+      this.start-=5
+      this.end-=1
+    }
     else{
       this.start-=5
       this.end-=5
