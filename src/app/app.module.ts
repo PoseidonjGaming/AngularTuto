@@ -21,6 +21,8 @@ import { CartComponent } from './compenents/cart/cart.component';
 import { ProductComponent } from './compenents/product/product/product.component';
 import { DetailProductComponent } from './compenents/product/detail-product/detail-product.component';
 import { NotFoundComponent } from './compenents/not-found/not-found.component';
+import { AuthenticationComponent } from './compenents/authentication/authentication.component';
+import { ProfileComponent } from './compenents/profile/profile.component';
 
 registerLocaleData(fr);
 
@@ -42,7 +44,9 @@ registerLocaleData(fr);
     CartComponent,
     DetailProductComponent,
     ProductComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AuthenticationComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
