@@ -20,6 +20,7 @@ import { ObservableComponent } from './compenents/observable/observable.componen
 import { CartComponent } from './compenents/cart/cart.component';
 import { ProductComponent } from './compenents/product/product/product.component';
 import { DetailProductComponent } from './compenents/product/detail-product/detail-product.component';
+import { NotFoundComponent } from './compenents/not-found/not-found.component';
 
 registerLocaleData(fr);
 
@@ -40,7 +41,8 @@ registerLocaleData(fr);
     ObservableComponent,
     CartComponent,
     DetailProductComponent,
-    ProductComponent
+    ProductComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

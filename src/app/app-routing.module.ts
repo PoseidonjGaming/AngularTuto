@@ -13,6 +13,7 @@ import { ServiceComponent } from './compenents/service/service.component'
 import { ObservableComponent } from './compenents/observable/observable.component';
 import { ProductComponent } from './compenents/product/product/product.component';
 import { DetailProductComponent } from './compenents/product/detail-product/detail-product.component';
+import { NotFoundComponent } from './compenents/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, title: 'Accueil' },
@@ -38,6 +39,7 @@ const routes: Routes = [
       { path: '', component: ProductComponent, title: ' product' },
     ], component: ProductComponent, title: 'product'
   },
+  { path: '**', component: NotFoundComponent, title: '404' },
 ];
 
 @NgModule({
