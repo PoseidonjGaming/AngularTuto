@@ -11,23 +11,33 @@ import { FormComponent } from './compenents/forms/form/form.component'
 import { RactiveFormComponent } from './compenents/forms/ractive-form/ractive-form.component'
 import { ServiceComponent } from './compenents/service/service.component'
 import { ObservableComponent } from './compenents/observable/observable.component';
+import { ProductComponent } from './compenents/product/product/product.component';
+import { DetailProductComponent } from './compenents/product/detail-product/detail-product.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent , title: 'Accueil'},
-  { path: 'pres', component: PresComponent , title: 'Pres'},
-  { path: 'todo', component: TodoListComponent,  title: 'Todo'},
-  { path: 'filter', component: FilterComponent,  title: 'Filter'},
-  { path: 'filter', component: FilterComponent,  title: 'Filter'},
-  { path: 'directive', component: DirectiveComponent,  title: 'directive'},
-  { path: 'local', component: LocalComponent,  title: 'locals'},
-  { path: 'custom', children:[
-    { path:'pipe', component: CustomPipeComponent },
-    { path:'', redirectTo:'pipe', pathMatch: "full"}
-  ]},
-  { path: 'driven-forms', component: FormComponent,  title: 'Forms'},
-  { path: 'reactive-forms', component: RactiveFormComponent,  title: 'Reactive Forms'},
-  { path: 'service', component: ServiceComponent,  title: 'Service'},
-  { path: 'obs', component: ObservableComponent,  title: 'Observable'},
+  { path: '', component: HomeComponent, title: 'Accueil' },
+  { path: 'pres', component: PresComponent, title: 'Pres' },
+  { path: 'todo', component: TodoListComponent, title: 'Todo' },
+  { path: 'filter', component: FilterComponent, title: 'Filter' },
+  { path: 'filter', component: FilterComponent, title: 'Filter' },
+  { path: 'directive', component: DirectiveComponent, title: 'directive' },
+  { path: 'local', component: LocalComponent, title: 'locals' },
+  {
+    path: 'custom', children: [
+      { path: 'pipe', component: CustomPipeComponent },
+      { path: '', redirectTo: 'pipe', pathMatch: "full" }
+    ]
+  },
+  { path: 'driven-forms', component: FormComponent, title: 'Forms' },
+  { path: 'reactive-forms', component: RactiveFormComponent, title: 'Reactive Forms' },
+  { path: 'service', component: ServiceComponent, title: 'Service' },
+  { path: 'obs', component: ObservableComponent, title: 'Observable' },
+  {
+    path: 'product', children: [
+      { path: ':id', component: DetailProductComponent, title: 'Detail product' },
+      { path: '', component: ProductComponent, title: ' product' },
+    ], component: ProductComponent, title: 'product'
+  },
 ];
 
 @NgModule({
