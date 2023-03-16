@@ -9,6 +9,7 @@ import { LocalComponent } from './compenents/local/local.component'
 import { CustomPipeComponent } from './compenents/custom-pipe/custom-pipe.component'
 import { FormComponent } from './compenents/forms/form/form.component'
 import { RactiveFormComponent } from './compenents/forms/ractive-form/ractive-form.component'
+import { ServiceComponent } from './compenents/service/service.component'
 
 const routes: Routes = [
   { path: '', component: HomeComponent , title: 'Accueil'},
@@ -24,6 +25,7 @@ const routes: Routes = [
   ]},
   { path: 'driven-forms', component: FormComponent,  title: 'Forms'},
   { path: 'reactive-forms', component: RactiveFormComponent,  title: 'Reactive Forms'},
+  { path: 'service', component: ServiceComponent,  title: 'Service'},
 ];
 
 @NgModule({

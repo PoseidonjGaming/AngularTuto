@@ -15,6 +15,7 @@ import { CustomPipeComponent } from './compenents/custom-pipe/custom-pipe.compon
 import { SortPipe } from './pipes/sort.pipe';
 import { FormComponent } from './compenents/forms/form/form.component';
 import { RactiveFormComponent } from './compenents/forms/ractive-form/ractive-form.component';
+import { ServiceComponent } from './compenents/service/service.component';
 
 registerLocaleData(fr);
 
@@ -30,7 +31,8 @@ registerLocaleData(fr);
     CustomPipeComponent,
     SortPipe,
     FormComponent,
-    RactiveFormComponent
+    RactiveFormComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,
