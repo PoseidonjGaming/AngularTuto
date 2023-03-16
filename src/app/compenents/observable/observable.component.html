@@ -1,2 +1,15 @@
 <button class="btn btn-primary" (click)="start()" [disabled]="disabled">ctn</button>
 <p>{{number}}</p>
+
+
+<div class="row">
+    <div class="col-4" *ngFor="let product of tab">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.price | currency }}</p>
+          <button class="btn btn-success" (click)="addToCart(product)">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+  </div>

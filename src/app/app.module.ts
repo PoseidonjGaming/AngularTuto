@@ -17,6 +17,7 @@ import { FormComponent } from './compenents/forms/form/form.component';
 import { RactiveFormComponent } from './compenents/forms/ractive-form/ractive-form.component';
 import { ServiceComponent } from './compenents/service/service.component';
 import { ObservableComponent } from './compenents/observable/observable.component';
+import { CartComponent } from './compenents/cart/cart.component';
 
 registerLocaleData(fr);
 
@@ -34,7 +35,8 @@ registerLocaleData(fr);
     FormComponent,
     RactiveFormComponent,
     ServiceComponent,
-    ObservableComponent
+    ObservableComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
