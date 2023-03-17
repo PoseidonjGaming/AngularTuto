@@ -23,6 +23,12 @@ import { DetailProductComponent } from './compenents/product/detail-product/deta
 import { NotFoundComponent } from './compenents/not-found/not-found.component';
 import { AuthenticationComponent } from './compenents/authentication/authentication.component';
 import { ProfileComponent } from './compenents/profile/profile.component';
+import { UserComponent } from './compenents/user/user.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DetailUserComponent } from './compenents/user/detail-user/detail-user.component';
+
+
+
 
 registerLocaleData(fr);
 
@@ -46,18 +52,21 @@ registerLocaleData(fr);
     ProductComponent,
     NotFoundComponent,
     AuthenticationComponent,
-    ProfileComponent
+    ProfileComponent,
+    UserComponent,
+    DetailUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [{
-    provide: LOCALE_ID, useValue:'fr'
-  },{
-    provide: DEFAULT_CURRENCY_CODE, useValue:'EUR'
+    provide: LOCALE_ID, useValue: 'fr'
+  }, {
+    provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'
   }],
   bootstrap: [AppComponent]
 })

@@ -16,6 +16,8 @@ import { DetailProductComponent } from './compenents/product/detail-product/deta
 import { NotFoundComponent } from './compenents/not-found/not-found.component';
 import { AuthenticationGuard } from './guards/authentication.guard';
 import { AuthenticationComponent } from './compenents/authentication/authentication.component';
+import { UserComponent } from './compenents/user/user.component';
+import { DetailUserComponent } from './compenents/user/detail-user/detail-user.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, title: 'Accueil' },
@@ -35,13 +37,18 @@ const routes: Routes = [
   { path: 'reactive-forms', component: RactiveFormComponent, title: 'Reactive Forms' },
   { path: 'service', component: ServiceComponent, title: 'Service' },
   { path: 'cnx', component: AuthenticationComponent, title: 'Login' },
+  { path: 'user', component: UserComponent, title: 'User' },
+  { path: 'user/:id', component: DetailUserComponent },
   { path: 'obs', component: ObservableComponent, title: 'Observable', canActivate: [AuthenticationGuard] },
   {
     path: 'product', component: ProductComponent, title: 'product', children: [
       { path: ':id', component: DetailProductComponent, title: 'Detail product' }
     ]
   },
-  { path: '**', component: NotFoundComponent, title: '404' },
+
+  { path: '**', component: NotFoundComponent, title: '404' }
+
+
 ];
 
 @NgModule({
