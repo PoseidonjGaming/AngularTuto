@@ -19,8 +19,9 @@ export class DetailProductComponent implements OnInit {
     })
   }
 
-  getDetail(id: string) {
-    switch (id) {
+  getDetail(slug: string) {
+    console.log(slug)
+    switch (slug) {
       case '1':
         this.name = 'test'
         this.address = '6 rue du cul'
@@ -30,10 +31,9 @@ export class DetailProductComponent implements OnInit {
         this.address = '6 rue du cul'
         break;
       default:
-        this.router.navigate(['/404'], {
+        this.router.navigateByUrl('/404', {
           skipLocationChange: true
         })
-       
     }
 
   }

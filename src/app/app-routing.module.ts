@@ -37,11 +37,9 @@ const routes: Routes = [
   { path: 'cnx', component: AuthenticationComponent, title: '404' },
   { path: 'obs', component: ObservableComponent, title: 'Observable', canActivate: [AuthenticationGuard] },
   {
-    path: 'product', children: [
-      { path: '', component: ProductComponent, title: ' product' },
-      { path: ':id', component: DetailProductComponent, title: 'Detail product' },
-
-    ], component: ProductComponent, title: 'product'
+    path: 'product', component: ProductComponent, title: 'product', children: [
+      { path: ':id', component: DetailProductComponent, title: 'Detail product' }
+    ]
   },
   { path: '**', component: NotFoundComponent, title: '404' },
 ];

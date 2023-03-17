@@ -1,1 +1,12 @@
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/product/john">error</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/product', '1']">Jane Doe</a>
+    </li>
+</ul>
 
+<div>
+    <router-outlet></router-outlet>
+</div>
