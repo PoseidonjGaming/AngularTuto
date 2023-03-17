@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthitencationServiceService } from '../services/authitencation-service.service';
 
@@ -7,11 +7,14 @@ import { AuthitencationServiceService } from '../services/authitencation-service
   providedIn: 'root'
 })
 export class AuthenticationGuard implements CanActivate {
-  constructor(private ath:AuthitencationServiceService){}
+  constructor(private ath: AuthitencationServiceService, private router: Router) { }
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return this.ath.isAuthitacation();
+    if (this.ath.isAuthitacation()) {
+      return this.ath.isAuthitacation();
+    }
+    return this.router.parseUrl(`/cnx?redirect=${state.url}`)
   }
-  
+
 }

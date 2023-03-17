@@ -16,6 +16,7 @@ export class AuthenticationComponent {
 
   uncnx(){
     this.auth.lougout()
+    
   }
 
   isCNX(): boolean{
