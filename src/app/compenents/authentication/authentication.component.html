@@ -1,2 +1,5 @@
-<button class="btn btn-success" (click)="cnx()">Connexion</button>
-<button class="btn btn-success" (click)="cnx()">Déconnexion</button>
+<button *ngIf="isCNX(); else none" class="btn btn-success" (click)="uncnx()">Déconnexion</button>
+
+<ng-template #none>
+    <button  class="btn btn-success" (click)="cnx()">Connexion</button>
+</ng-template>

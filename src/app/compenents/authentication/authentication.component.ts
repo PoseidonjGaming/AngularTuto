@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthitencationServiceService } from 'src/app/services/authitencation-service.service';
 
 @Component({
   selector: 'app-authentication',
@@ -7,8 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AuthenticationComponent {
 
+  constructor(private auth: AuthitencationServiceService){}
   
   cnx(){
+    this.auth.login("Admin", "1234")
+  }
 
+  uncnx(){
+    this.auth.lougout()
+  }
+
+  isCNX(): boolean{
+    return this.auth.isAuthitacation()
   }
 }
