@@ -11,19 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 export class DetailUserComponent implements OnInit {
 
   constructor(private api: UserService, private route: ActivatedRoute) { }
-  user: IUser = {
-    id: 0,
-    name: '',
-    username: '',
-    phone: '',
-    email: '',
-    address: {
-      street: '',
-      suite: '',
-      city: '',
-      zipcode: ''
-    }
-  };
+  user?: IUser;
   ngOnInit(): void {
     this.route.paramMap.subscribe((param: ParamMap) => {
       const id = param.get('id') as string

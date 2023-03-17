@@ -37,7 +37,7 @@ const routes: Routes = [
   { path: 'reactive-forms', component: RactiveFormComponent, title: 'Reactive Forms' },
   { path: 'service', component: ServiceComponent, title: 'Service' },
   { path: 'cnx', component: AuthenticationComponent, title: 'Login' },
-  { path: 'user', component: UserComponent, title: 'User' },
+  { path: 'user', component: UserComponent, title: 'User', children:[] },
   { path: 'user/:id', component: DetailUserComponent },
   { path: 'obs', component: ObservableComponent, title: 'Observable', canActivate: [AuthenticationGuard] },
   {
