@@ -18,7 +18,7 @@ export class PresComponent {
 
   src='assets/LoopingImage.jpg'
 
-  msg?: string;
+  msg: string | null=null;
 
   users=['test','test','test']
 
